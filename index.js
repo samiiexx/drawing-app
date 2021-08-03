@@ -15,6 +15,8 @@
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 const clear = document.getElementById('clear')
+const increase = document.getElementById('increase')
+const decrease = document.getElementById('decrease')
 
 let size = 20
 let isPressed = false
@@ -66,5 +68,5 @@ function drawLine(x1, y1, x2, y2) {
 }
 
 clear.addEventListener('click', () => {
-    canvas.for(canvas => canvas.value = '');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 })
